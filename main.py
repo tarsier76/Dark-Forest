@@ -11,6 +11,8 @@ test_font = pygame.font.Font('font\Boxy-Bold.ttf', 50)
 character = pygame.image.load('graphics/player/char_test/character.png')
 grass = pygame.image.load('graphics/environment/map_grass.png')
 text_surface = test_font.render('Dark Forest', False, 'White', 'Black')
+night_background = pygame.Surface((800, 550))
+night_background.set_alpha(210)
 
 
 while True:
@@ -20,7 +22,8 @@ while True:
             exit()
   
     screen.blit(grass, (0,0))
-    screen.blit(character, (400,200))
+    screen.blit(character, (400,250))
+    screen.blit(night_background, (0,0))
     screen.blit(text_surface, (200, 30))
     
     pygame.display.update()
