@@ -10,7 +10,7 @@ test_font = pygame.font.Font('font\Boxy-Bold.ttf', 50)
 
 character = pygame.image.load('graphics/player/char_test/character.png')
 grass = pygame.image.load('graphics/environment/map_grass.png')
-text_surface = test_font.render('Dark Forest', False, 'White')
+text_surface = test_font.render('Dark Forest', False, 'White', 'Black')
 
 
 while True:
