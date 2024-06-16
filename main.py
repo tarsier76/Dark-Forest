@@ -6,15 +6,15 @@ pygame.init()
 screen = pygame.display.set_mode((800, 550))
 pygame.display.set_caption("Dark Forest")
 clock = pygame.time.Clock()
-test_font = pygame.font.Font('font\Boxy-Bold.ttf', 50)
+test_font = pygame.font.Font('font/Boxy-Bold.ttf', 50)
 
-character = pygame.image.load('graphics/player/char_test/character.png').convert_alpha()
+character = pygame.image.load('graphics/player/char_test/main_char.png').convert_alpha()
 character_rectangle = character.get_rect(center = (400, 250))
 
-grass = pygame.image.load('graphics/environment/map_grass.png').convert_alpha()
+grass = pygame.image.load('graphics/environment/map.png').convert_alpha()
 game_title_text = test_font.render('Dark Forest', False, 'White', 'Black')
 night_background = pygame.Surface((800, 550))
-night_background.set_alpha(210)
+night_background.set_alpha(225)
 
 
 while True:
