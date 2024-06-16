@@ -25,15 +25,15 @@ while True:
             exit()
         
         pressed = pygame.key.get_pressed()
-        if pressed[pygame.K_UP] or pressed[pygame.K_w]:
+        if (pressed[pygame.K_UP] or pressed[pygame.K_w]) and character_rectangle.top >= 0:
             character_rectangle.top -= 2
-        if pressed[pygame.K_DOWN] or pressed[pygame.K_s]:
+        if (pressed[pygame.K_DOWN] or pressed[pygame.K_s]) and character_rectangle.bottom <= 550:
             character_rectangle.bottom += 2 
-        if pressed[pygame.K_LEFT] or pressed[pygame.K_a]:
+        if (pressed[pygame.K_LEFT] or pressed[pygame.K_a]) and character_rectangle.left >= 0:
             character_rectangle.left -= 2 
-        if pressed[pygame.K_RIGHT] or pressed[pygame.K_d]:
+        if (pressed[pygame.K_RIGHT] or pressed[pygame.K_d]) and character_rectangle.right <= 800:
             character_rectangle.right += 2
-
+            
   
     screen.blit(grass, (0,0))
     screen.blit(character, character_rectangle)
